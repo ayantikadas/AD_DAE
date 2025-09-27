@@ -32,7 +32,7 @@ import os
 # sys.path.insert(0,'/storage/Ayantika/Diffusion_AE_medical/')
 # import dataset.slice_data_h5_ADNI_with_baseline as sdl
 import sys
-sys.path.insert(0,'/home/projects/medimg/ayantika/Ayantika/Diff_AE_xstart_w_xbsln_disentangle_unsup/dataset/')
+sys.path.insert(0,'./dataset/')
 import slice_data_h5_ADNI_ventricle_mask as sdl
 
 
@@ -70,7 +70,7 @@ class ADNI_dataloader():
     # Define the custom transform
 
     def get_transform_nii_vols(self,key_list_image,key_list_label):
-        print("in fuction",key_list_image+key_list_label)
+#         print("in fuction",key_list_image+key_list_label)
 #         tuple(key_list_image+key_list_label)
         transforms_ = Compose(
             [
@@ -187,6 +187,7 @@ class ADNI_dataloader():
 #         self.config.dataloader.h5cachedir_ = '/storage/Ayantika/h5data_store_with_DiffAE_output'
             
         datalist = self.make_dict_list_from_csv(csv_file_name,mode)
+#         print('datalist',datalist)
         masklist = self.make_dict_list_from_csv(csv_mask_name,mode)
         key_list_image = []
         key_list_label = []
@@ -196,7 +197,7 @@ class ADNI_dataloader():
         for keys_ in masklist.keys():
             key_list_label.append(str(keys_)+'_label')
             key_list_label.append(str(keys_)+'_baseline_label')
-        print(key_list_image,key_list_label)
+#         print(key_list_image,key_list_label)
 
         transforms_ = self.get_transform_nii_vols(key_list_image,key_list_label)
         self.config.dataloader.h5cachedir_ = self.h5_save_path

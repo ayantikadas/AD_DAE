@@ -33,7 +33,7 @@ class H5CachedDataset(Dataset):
                  end_slice = 91,
                  h5cachedir=None,
                 padding_values = ((18,18), (0, 0), (0,0)),\
-                ventricle_mask_root_path = '/storage/ayantika/Ayantika/Data_final/ADNI_ventricle_mask/'):
+                ventricle_mask_root_path = '/home/projects/medimg/ayantika/Ayantika/Data_final/ADNI_ventricle_mask/'):
         #### nslices_per_image ---> total slice in the volume
         #### h5cachedir ---> directory to save one .h5 files for each volume & it would act like a cache directory
         #### if h5cachedir does not exist create one 
@@ -222,6 +222,8 @@ class H5CachedDataset(Dataset):
                     'affine':np.eye(3)
                 }})
             if not os.path.exists(ventricle_mask_path):
+#                 os.mkdir(ventricle_mask_path)
+#             if not os.listdir(ventricle_mask_path):
                 print(ventricle_mask_path)
                 for keys__ in data.keys():
                     if '_train_' in keys__:
@@ -249,8 +251,11 @@ class H5CachedDataset(Dataset):
 #             print("**",data.keys())
 #             res = self.xfms2(data)
             if not os.path.exists(ventricle_mask_path):
+#                 os.mkdir(ventricle_mask_path)
+#             if not os.listdir(ventricle_mask_path):
                 print(ventricle_mask_path)
                 for keys__ in data.keys():
+#                     print('keys__',keys__)
                     if '_train_' in keys__:
                         mode_key = '_train_'                        
                     elif '_test_' in keys__:

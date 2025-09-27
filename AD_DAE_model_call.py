@@ -9,9 +9,11 @@ from omegaconf import OmegaConf
 from choices import *
 from templates import *
 
-def AD_DAE_model_call_func():
-    h5_data_path = '/home/projects/medimg/ayantika/Ayantika/h5data_store/'
-    region_info_path = '/home/projects/medimg/ayantika/Ayantika/Data_final/'
+def AD_DAE_model_call_func(root_path='/home/projects/medimg/ayantika/Ayantika/Diff_AE_xstart_w_xbsln_disentangle_unsup/AD_DAE_files/',\
+                          checkpoint_path = '/home/projects/medimg/ayantika/Ayantika/results/AD_DAE_new_train/ADNI_AD_CN_MCI/'):
+    
+    h5_data_path = root_path+'/data_store/'
+    region_info_path = root_path+'/data_store/'
     take_from_tmp = True
     conf = AD_DAE_autoenc_130M()
     data_config_path = './config_file_ADNI.yaml'
@@ -32,14 +34,13 @@ def AD_DAE_model_call_func():
     conf.data_config_path = './config_file_ADNI.yaml'
     conf.img_size_height = 160
     conf.img_size_width = 208
-    checkpoint_path = '/home/projects/medimg/ayantika/Ayantika/results/AD_DAE_new_train/ADNI_AD_CN_MCI/'
+    
 
 
     ##########
-    conf.csv_path = './dataset/ADNI_Data_loader_csv/ADNI_info_train_final_subset.csv'
+#     conf.csv_path = './dataset/ADNI_Data_loader_csv/ADNI_info_train_final_subset.csv'
     conf.csv_path_test = './dataset/ADNI_Data_loader_csv/ADNI_info_test_final.csv'
-   
-    conf.h5_save_path_train = h5_data_path+'/ADNI_cond_train_ventricle_mask'
+#     conf.h5_save_path_train = h5_data_path+'/ADNI_cond_train_ventricle_mask'
     conf.h5_save_path_test = h5_data_path+'/ADNI_cond_test_ventricle_mask'
 
 
@@ -47,8 +48,8 @@ def AD_DAE_model_call_func():
     conf.eval_num_images = 1000
 
 
-    conf.csv_file_name_train = './dataset/ADNI_Data_loader_csv/ADNI_train_pair_data_info.csv'
-    conf.csv_mask_name_train ='./dataset/ADNI_Data_loader_csv/ADNI_train_pair_mask_info.csv'
+#     conf.csv_file_name_train = './dataset/ADNI_Data_loader_csv/ADNI_train_pair_data_info.csv'
+#     conf.csv_mask_name_train ='./dataset/ADNI_Data_loader_csv/ADNI_train_pair_mask_info.csv'
 
     conf.csv_file_name_test = './dataset/ADNI_Data_loader_csv/ADNI_test_pair_data_info.csv'
     conf.csv_mask_name_test= './dataset/ADNI_Data_loader_csv/ADNI_test_pair_mask_info.csv'
