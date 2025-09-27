@@ -2,7 +2,7 @@
 
 ## Architecture
 <p align="center">
-  <img src="assets/architecture_ad_dae.png" alt="AD-DAE Architecture" width="800">
+  <img src="assets/Figure_architechture_diagram.pdf" alt="AD-DAE Architecture" width="800">
 </p>
 
 > Figure: High-level schematic of the AD-DAE framework showing the encoder-guided diffusion decoder, latent shift estimation, and consistency guidance.
