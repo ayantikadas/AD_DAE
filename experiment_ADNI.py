@@ -541,6 +541,7 @@ class LitModel(pl.LightningModule):
                     x_start = x_start_baseline
                 else:
                     self.sampler.cond_shift_weight= 1
+                    x_start = x_start_baseline
                 losses = self.sampler.training_losses(model=self.model,
                                                       x_start=x_start,
                                                       x_start_baseline=x_start_baseline,
