@@ -1,4 +1,4 @@
-# AD-DAE: Unsupervised Modeling of Longitudinal Alzheimer’s Disease Progression with Diffusion Auto-Encoder
+# AD-DAE: Alzheimer’s Disease Progression Modeling with Unpaired Longitudinal MRI using Diffusion Auto-Encoders
 
 ## Architecture
 ![AD-DAE Architecture](assets/Figure_architechture_diagram.png)
