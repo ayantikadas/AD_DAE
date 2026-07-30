@@ -3,10 +3,14 @@
 # AD-DAE
 ### Alzheimer's Disease Progression Modeling with Unpaired Longitudinal MRI using Diffusion Auto-Encoders
 
+[![Paper](https://img.shields.io/badge/IEEE%20JBHI-Paper-00629B.svg)](https://ieeexplore.ieee.org/abstract/document/11579738)
+[![arXiv](https://img.shields.io/badge/arXiv-2511.05934-b31b1b.svg)](https://arxiv.org/abs/2511.05934)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C.svg?logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![MONAI](https://img.shields.io/badge/MONAI-Toolkit%202.2-76B900.svg)](https://monai.io/)
 [![License](https://img.shields.io/badge/License-TBD-lightgrey.svg)](#license)
+
+📄 **Paper:** [IEEE JBHI](https://ieeexplore.ieee.org/abstract/document/11579738) &nbsp;|&nbsp; [arXiv:2511.05934](https://arxiv.org/abs/2511.05934)
 
 </div>
 
@@ -168,10 +172,19 @@ If you use AD-DAE in your research, please cite our work:
   title   = {AD-DAE: Alzheimer's Disease Progression Modeling with Unpaired Longitudinal MRI using Diffusion Auto-Encoders},
   author  = {Das, Ayantika and others},
   journal = {IEEE Journal of Biomedical and Health Informatics (JBHI)},
-  year    = {2026}
+  year    = {2026},
+  url     = {https://ieeexplore.ieee.org/abstract/document/11579738}
+}
+
+@article{das_addae_arxiv,
+  title   = {AD-DAE: Alzheimer's Disease Progression Modeling with Unpaired Longitudinal MRI using Diffusion Auto-Encoders},
+  author  = {Das, Ayantika and others},
+  journal = {arXiv preprint arXiv:2511.05934},
+  year    = {2025},
+  url     = {https://arxiv.org/abs/2511.05934}
 }
 ```
-<!-- TODO: replace with the final published citation (volume/pages/DOI) once available. -->
+<!-- TODO: update author list and volume/pages once finalized in IEEE Xplore. -->
 
 ## Acknowledgements
 - Built on top of the [MONAI](https://monai.io/) Toolkit and diffusion-autoencoder concepts popularized by [Diff-AE](https://github.com/phizaz/diffae) and [DDIM](https://arxiv.org/abs/2010.02502).
